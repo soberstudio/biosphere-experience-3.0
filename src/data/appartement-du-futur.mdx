@@ -1,16 +1,37 @@
+import { Picture } from 'astro:assets';
+import douche from '../assets/images/urbaine/douche.jpg';
+import vetements from '../assets/images/urbaine/vetements.jpg';
+import grillons from '../assets/images/urbaine/elevage-de-grillons.jpg';
+import toilettes from '../assets/images/urbaine/toilettes-vivantes.jpg';
+import produits from '../assets/images/urbaine/produits-entretien.jpg';
+import cocotte from '../assets/images/urbaine/cocotte-du-futur.jpg';
+import regime from '../assets/images/urbaine/regime-alimentaire.jpg';
+import bioponie from '../assets/images/urbaine/bioponie.jpg';
+import cerveau from '../assets/images/urbaine/cerveau.jpg';
+import gardeManger from '../assets/images/urbaine/garde-manger.jpg';
+import regulation from '../assets/images/urbaine/regulation-thermique.jpg';
+import ordinateur from '../assets/images/urbaine/ordinateur-low-tech.jpg';
+import litBoite from '../assets/images/urbaine/lit-boite.jpg';
+import intranet from '../assets/images/urbaine/intranet.jpg';
+import fitness from '../assets/images/urbaine/fitness-club.jpg';
+import terrasse from '../assets/images/urbaine/terrasse-solaire.jpg';
+import biodigester from '../assets/images/urbaine/biodigester.jpg';
+
 <details>
 
 <summary><h3>1. Douche champignonnière</h3></summary>
-
+  <Picture src={douche} alt="Douche champignonnière" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
 <h4>Une douche qui divise par 10 la consommation d'eau, par 15 celle d'énergie et… qui produit des champignons.</h4>
 
 Les Français consomment en moyenne 150 litres d'eau par jour et par personne. 40 % de cette eau est utilisée pour l'hygiène (bain, douche).
 
 La consommation d'un ballon d'eau chaude représente plus de 10 % de la facture électrique d'un logement en France.
 
+
 <div class="note">
 <strong>Note:</strong> Notre objectif était de diviser par 10 la consommation d'eau et par 15 celle d'énergie
 </div>
+
 
 <h4>Principe de fonctionnement</h4>
 
@@ -51,12 +72,14 @@ Nous avons atteint les objectifs en termes d'économie d'eau et d'énergie. Cett
 
 <details>
     <summary><h3>2. Vêtements</h3></summary>
-    
+
+<Picture src={vetements} alt="Vêtements" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>Des vêtements en fibre naturelle, seconde main ou made in Boulogne-Billancourt.</h4>
 
-L'industrie du vêtement est l'une des plus polluantes au monde. Elle génère environ 1,2 milliard de tonnes de CO₂ par an, soit plus que tous les vols internationaux et le trafic maritime réunis. Elle est aussi responsable de 20 % de la pollution mondiale de l’eau à cause des teintures et des traitements chimiques.
+L'industrie du vêtement est l'une des plus polluantes au monde. Elle génère environ 1,2 milliard de tonnes de CO₂ par an, soit plus que tous les vols internationaux et le trafic maritime réunis. Elle est aussi responsable de 20 % de la pollution mondiale de l’eau à cause des teintures et des traitements chimiques. 
 
-Pour que notre garde-robe ne génère pas ces impacts négatifs, la première résolution a été de posséder peu de vêtements mais de qualité. Corentin a opté pour des vêtements en fibre naturelle (laine, coton, lin). Amateur de couture, il a fabriqué une partie de ses vêtements par lui-même (chaussures, pantalons). Caroline, de son côté, a privilégié la seconde main et le troc de vêtements, afin d’avoir accès à une plus grande diversité d’ensembles.
+Pour que notre garde-robe ne génère pas ces impacts négatifs, la première résolution a été de posséder peu de vêtements mais de qualité. Corentin a opté pour des vêtements en fibre naturelle (laine, coton, lin). Amateur de couture, il a fabriqué une partie de ses vêtements par lui-même (chaussures, pantalons). Caroline, de son côté, a privilégié la seconde main et le troc de vêtements, afin d’avoir accès à une plus grande diversité d’ensembles.  
 
 <h4>Principe de fonctionnement</h4>
 
@@ -75,9 +98,12 @@ Concernant les chaussures, pour les premières les semelle en bioplastique n'ont
 </details>
 <details>
     <summary><h3>3. Grillons</h3></summary>
+
+<Picture src={grillons} alt="Élevage de grillons" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>Des insectes comestibles adaptés à la vie urbaine</h4>
 
-La viande est très nutritive mais a un mauvais impact sur l'environnement. La consommation d'insectes demande peu de ressources et d'espace. Peu commune en Europe, elle l’est dans de nombreux pays du monde.
+La viande est très nutritive mais a un mauvais impact sur l'environnement. La consommation d'insectes demande peu de ressources et d'espace. Peu commune en Europe, elle l’est dans de nombreux pays du monde. 
 
 On estime que 2 milliards d'humains en consomment traditionnellement. Nous avons opté pour un régime alimentaire végétarien, tout en consommant une petite quantité d'insectes, notamment pour les apports en vitamine B12. Parmi les insectes comestibles, nous avons choisi les grillons, car ils sont très adaptés à l'élevage en milieu urbain.
 
@@ -87,7 +113,7 @@ Une armoire constituée de 6 vivariums était disposée dans l'entrée de l'appa
 
 Après 4 à 6 semaines dans nos vivarium, ils atteignaient la taille adulte. Nous posions alors un pondoir afin qu'ils déposent des oeufs (ces oeufs étaient ensuite donnés aux éleveurs Sandra et Alison). Puis nous placions un piège (simple bocal en verre) pour capturer ceux que nous allions consommer.
 
-<h3>Bilan et pistes d'amélioration
+<h3>Bilan et pistes d'amélioration</h3>
 
 Il n'y a pas eu de problème majeur, mais l'élevage a été beaucoup moins productif que prévu. Nous avons apprécié les consommer, mais nous nous sommes aussi beaucoup attachés à nos grillons, et leur principal intérêt a été de mettre une bonne ambiance dans l'appartement grâce à leur chant !
 L'élevage de grillons demande peu de temps et est très ludique.
@@ -103,6 +129,8 @@ L'élevage de grillons demande peu de temps et est très ludique.
 
 <details>
      <summary><h3>4. Toilettes vivantes</h3></summary>
+
+<Picture src={toilettes} alt="Toilettes vivantes" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
 
 <h4>Des toilettes vivantes pour valoriser les déchets organiques et économiser de l'eau</h4>
 
@@ -127,11 +155,11 @@ L’urine collectée a été valorisée dans différentes applications : intégr
 
 Nous utilisions des lingettes lavables et réutilisables en alternative au papier toilette.
 
-<h3>Bilan et pistes d'amélioration
+<h3>Bilan et pistes d'amélioration</h3>
 
 Les toilettes vivantes ont été un vrai succès. Elles ont très bien fonctionné, ont produit beaucoup de larves chaque semaine pour nourrir les poules de la ferme, le substrat produit était d'excellente qualité, et il n'y avait pas de mauvaises odeurs. Le temps de maintenance était très faible. Enfin, nous avons été émerveillés par ces larves auxquelles nous nous sommes beaucoup attachés !
 
-<h3>Voici nos retours d’expérience :
+<h3>Voici nos retours d'expérience :</h3>
 
 - Quand il a commencé à faire froid en octobre, les larves ont ralenti leur activité. Il aurait fallu que la température reste au-dessus de 20 degrés.
 - L'opération de tamisage était parfois difficile. Nous avons mis du temps avant de trouver le bon dosage de substrat afin que la matière soit facilement tamisable.
@@ -147,6 +175,9 @@ Les toilettes vivantes ont été un vrai succès. Elles ont très bien fonctionn
 </details>
 <details>
     <summary><h3>5. Produits d'entretien</h3></summary>
+
+<Picture src={produits} alt="Produits d'entretien" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>8 ingrédients pour faire briller l'appartement</h4>
 
 On estime qu'en France près de 50 % des logements sont concernés par une pollution de l’air intérieur liée aux COSV (composés organiques semi-volatils), émis notamment par les détergents, sprays, peintures ou produits parfumés.
@@ -160,7 +191,6 @@ Or nous voulions utiliser nos eaux usées pour la culture des plantes. Il était
 <h4>Principe</h4>
 
 Nous avons fait appel à Mathilde et Edith, 2 expertes dans ce domaine (de l'entreprise Léa Nature). Elles nous ont expliqué qu'on peut tout faire avec ces 8 composants :
-
 - Percarbonate de soude
 - Bicarbonate de soude
 - Acide citrique
@@ -169,9 +199,10 @@ Nous avons fait appel à Mathilde et Edith, 2 expertes dans ce domaine (de l'ent
 - Blanc de meudon
 - Terre de diatomée
 - Vinaigre blanc
-  Par exemple, on peut utiliser le vinaigre pour nettoyer les vitres, le bicarbonate pour absorber les odeurs. On peut aussi faire des combinaisons :
+Par exemple, on peut utiliser le vinaigre pour nettoyer les vitres, le bicarbonate pour absorber les odeurs. On peut aussi faire des combinaisons :
 
 <h4>Recettes</h4>
+
 
 <div class="recipe">
 <strong>Crème à récurer:</strong>
@@ -194,9 +225,13 @@ Pour notre douche, nous avions choisi du savon et du shampoing solides, neutres,
 
 Nous avons apprécié le principe d'avoir des bocaux avec différentes poudres et des recettes pour constituer les produits adaptés à chaque usage. Nous avons appris que "le propre n'a pas d'odeur".
 
+
+
 </details>
 <details>
     <summary><h3>6. Cocotte du futur</h3></summary>
+
+<Picture src={cocotte} alt="Cocotte du futur" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
 
 <h4>Un nouveau système de cuisson pour économiser de l'énergie, réduire les émissions de gaz à effet de serre et la pollution de l'air intérieur.</h4>
 
@@ -230,9 +265,12 @@ D'après les tests réalisés par les étudiants de l'ICAM, la cocotte du futur 
 - C'est très agréable de ne pas avoir à se soucier de la cuisson en cours. Contrairement à la cuisson au gaz ou aux plaques électriques, la cocotte du futur s'arrête automatiquement et les aliments ne sont jamais trop cuits. On peut donc lancer la cuisson et partir faire autre chose. Quand on rentre, c'est prêt et toujours chaud.
 - Ce type de cuisson à l'eau et à la vapeur amène à manger plus sainement. Les aliments ne sont pas frits ou grillés (ce qui est déconseillé par notre nutritionniste).
 
+
 </details>
 <details>
     <summary><h3>7. Régime alimentaire</h3></summary>
+
+<Picture src={regime} alt="Régime alimentaire" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
 
 <h4>Manger sain, bio, local, de saison, zéro déchet, économique… et appétissant.</h4>
 
@@ -252,7 +290,7 @@ Nous avons suivi les recommandations de notre nutritionniste Anthony Berthou, no
 <h4>Nos sources d'approvisionnement étaient les suivantes :</h4>
 
 - Les denrées qui se conservent longtemps comme les céréales, les légumineuses ou l'huile venaient de l'épicerie participative à laquelle nous avions adhéré (l'Epi des Loges), et
-  l'épicerie bio du quartier. Certains ont été commandés en gros à un commerce bio en ligne sur Internet.
+l'épicerie bio du quartier. Certains ont été commandés en gros à un commerce bio en ligne sur Internet.
 - Les fruits et légumes ainsi que les oeufs venaient principalement de la ferme partenaire La Ferme des Loges, à 15 km, dans laquelle nous travaillions une demi-journée par semaine. Une partie venait de l'épicerie bio du quartier.
 - Les aromatiques, légumes feuilles, grillons et les champignons étaient cultivés ou élevés directement dans l'appartement.
 - Nous consommions également des produits fermentés comme des boissons, yaourt et bocaux de lacto-fermentation, réalisés par Donatella, Julie ou nous même.
@@ -260,7 +298,6 @@ Nous avons suivi les recommandations de notre nutritionniste Anthony Berthou, no
 <h4>Bilan et pistes d'amélioration</h4>
 
 Il a fallu plusieurs semaines de tâtonnement, avant de trouver les bonnes recettes, notamment pour passer sous le budget visé des 6,50 € par jour et par personne. Une fois rodés, il est possible de manger sain et durable, tout en étant très économe en temps et argent. Voici les principaux obstacles que nous avons eus à franchir :
-
 - Apprendre à bien anticiper les repas, car nous partions d’ingrédients non transformés. Pour la cuisson de fèves, il faut penser à les faire tremper la veille, il faut laisser le temps à la pâte à bao pour lever, etc.
 - Nous passer des aliments sucrés et exotiques. Le besoin en sucre diminue petit à petit quand on en réduit la consommation. L’arrêt du café, du chocolat et autres gourmandises demande aussi quelques semaines à oublier. Une fois l’expérience terminée nous avons repris leur consommation, mais de manière beaucoup plus modérée (et maîtrisée).
 - La contrainte zéro déchet a limité la diversité d’aliments, car de nombreux produits ne sont pas emballés dans des cartons ou contenants réutilisables : le tofu, les laits végétaux, etc.
@@ -269,6 +306,9 @@ Il a fallu plusieurs semaines de tâtonnement, avant de trouver les bonnes recet
 </details>
 <details>
     <summary><h3>8. Bioponie</h3></summary>
+
+<Picture src={bioponie} alt="Bioponie" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>Faire pousser ses légumes dans la cuisine</h4>
 
 Les légumes feuilles (salades, aromatiques, épinards…) perdent rapidement leur valeur nutritive. De plus, une partie s'abîme pendant le transport et le stockage. Il est donc important qu'ils poussent au plus près du consommateur.
@@ -304,6 +344,8 @@ Le temps de maintenance est très faible et cela permet des économies, car les 
 </details>
 <details>
     <summary><h3>9. Cerveau</h3></summary>
+
+<Picture src={cerveau} alt="Cerveau" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
 
 <h4>Un appartement 100 % énergie renouvelable grâce au "cerveau"</h4>
 
@@ -341,9 +383,11 @@ Le cerveau a très bien fonctionné et nous avons été autonomes en énergie. N
 <details>
     <summary><h3>10. Garde-manger</h3></summary>
 
+<Picture src={gardeManger} alt="Garde-manger" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>Des techniques low-tech de conservation des aliments</h4>
 
-Dans un logement, le réfrigérateur consomme beaucoup d'énergie. De plus, de nombreux aliments se conservent très bien la température ambiante.
+Dans un logement, le réfrigérateur consomme beaucoup d'énergie. De plus, de nombreux aliments se conservent très bien la température ambiante. 
 
 Il faut respecter quelques règles. Les pommes, par exemple, doivent être dans un endroit aéré car elles émettent de l'éthylène qui peut impacter les autres fruits.
 
@@ -374,6 +418,9 @@ Nous avons été très satisfaits de toutes ces techniques de conservation. Il y
 
 <details>
     <summary><h3>11. Régulation thermique</h3></summary>
+
+<Picture src={regulation} alt="Régulation thermique" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>ISOLATION, CHAUFFAGE "SLOW HEAT" ET CLIM' LOW-TECH</h4>
 
 <h4>Chauffer ce qu'il faut là où il faut quand il faut.</h4>
@@ -400,7 +447,7 @@ Selon cette étude, un point crucial était de poser des stores. Nous devions le
 
 Enfin nous avons étudié le flux d'air pour la ventilation. L'air entrait par la cage d'escalier, car il y est préchauffé en hiver et rafraîchi en été grâce à l'inertie thermique du bâtiment. Le flux d'air passait par la chambre et s'évacuait par trois sorties via les toilettes, la douche et la hotte de cuisine. Des capteurs de température et d'humidité placés à l'intérieur et à l'extérieur de l'appartement permettaient au cerveau de commander les ventilateurs afin qu'il s'enclenchent uniquement lorsque c'était nécessaire, afin d'optimiser les échanges thermiques avec l'extérieur.
 
-<h3>Bilan et pistes d’amélioration
+<h3>Bilan et pistes d’amélioration</h3>
 
 Notre objectif était de réguler la température entre 18 et 28 degrés sans avoir de chauffage ni de climatisation. Même en cas de forte chaleur nous sommes bien restés en dessous des 28 degrés. Par contre, nous n'avons pas réussi à rester au-dessus des 18 degrés lorsqu'il faisait froid à l'extérieur. De plus, le taux d'humidité était souvent trop élevé (au-dessus de 70 %).
 
@@ -412,25 +459,30 @@ Notre objectif était de réguler la température entre 18 et 28 degrés sans av
 </details>
 <details>
     <summary><h3>12. Ordinateur low-tech</h3></summary>
+
+<Picture src={ordinateur} alt="Ordinateur low-tech" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>Transformer un smartphone en ordinateur portable</h4>
 
 Le principal impact environnemental du secteur numérique provient de la fabrication et de l’usage des terminaux numériques (smartphones, ordinateurs, tablettes, télévisions, etc.). Par exemple, la fabrication d’un smartphone nécessite en moyenne d’extraire 200 kg de matières premières. En France, il est renouvelé tous les 23 mois en moyenne.
 
 Nous voulions diminuer notre impact tout en répondant à nos besoins numériques : envoyer des mails, communiquer sur les réseaux sociaux, écouter de la musique, regarder des films, téléphoner, etc. Un smartphone est capable de réaliser toutes ces tâches, mais n'est pas aussi ergonomique qu'un ordinateur. Nous avons donc transformé un smartphone en ordinateur low-tech. Grâce à ce système, Corentin n'a plus d'ordinateur depuis plus de 4 ans.
 
-<h3>Principe de fonctionnement
+<h3>Principe de fonctionnement</h3>
 
 L'OTG (On-The-Go) est une technologie commune à la plupart des smartphones Android. Elle permet de connecter des appareils USB au téléphone. Ainsi nous avons pu relier un hub USB au smartphone, auquel nous pouvons connecter un clavier, une souris, et des clés USB. Un boîtier en bois permet de contenir tout cet équipement. Un aimant maintient le téléphone en position horizontale ou verticale.
 
 Pour regarder des films, l'écran du smartphone étant de taille réduite, nous avons opté pour un petit vidéoprojecteur 12 volts.
 
-<h3>Bilan et pistes d'amélioration
+<h3>Bilan et pistes d'amélioration</h3>
 
 Cet ordinateur low-tech est très adapté à l'usage de Corentin. Cependant, il ne convient pas à Caroline qui a besoin d'un écran plus grand et d'une puissance de calcul plus importante pour faire tourner les logiciels de conception 3D pour l'architecture d'intérieur. Elle a opté pour un ordinateur reconditionné dont elle prolonge la durée de vie au maximum.
 
 </details>
 <details>
     <summary><h3>13. Lit boîte</h3></summary>
+
+<Picture src={litBoite} alt="Lit boîte" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
 
 <h4>Un lit boîte pour dormir confortablement sur ses deux oreilles</h4>
 
@@ -450,13 +502,15 @@ Le flux d'air pour la ventilation de l'appartement venait de la cage d'escalier,
 
 Pendant les mois les plus froids nous avons testé une sous-couverture chauffante électrique qui permet, avec moins de 100 watts, de préchauffer le lit sans avoir besoin de chauffer la pièce entière.
 
-<h3>Bilan et pistes d'amélioration
+<h3>Bilan et pistes d'amélioration</h3>
 
 Nous avons été globalement satisfaits du lit-boîte. Le concept d'avoir un lieu très silencieux, avec une obscurité totale, uniquement dédié au sommeil, nous paraît très sain. L’unique amélioration à apporter serait sur la qualité du matelas : la laine de chanvre qui le constituait se tassait au fil des semaines.
 
 </details>
 <details>
     <summary><h3>14. Intranet</h3></summary>
+
+<Picture src={intranet} alt="Intranet" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
 
 <h4>Un réseau intranet pour communiquer entre voisins et regarder des films</h4>
 
@@ -466,7 +520,7 @@ Quand j'envoie une photo à mon voisin, elle part via l'antenne de mon fournisse
 
 En développant un intranet à l'échelle du quartier, nous voulions regarder des films via un moyen de communication à la fois écologique et pas cher, mais aussi développer un réseau social entre voisins.
 
-<h3>Principe de fonctionnement
+<h3>Principe de fonctionnement</h3>
 
 Pendant notre escale à la Havane à Cuba, nous avons découvert un réseau intranet qui connecte 10 000 personnes entre elles.
 
@@ -474,7 +528,7 @@ L'accès à internet coûte cher pour les cubains. Ce système leur permet d'avo
 
 Les étudiants de l'ICAM de Nantes ont travaillé sur une version adaptée à notre contexte. Ils ont programmé un Raspberry Pi, une sorte d'ordinateur minimaliste, et l'ont connecté à une carte SD et à une antenne wifi posée sur le toit de notre immeuble. Les voisins qui captaient le signal pouvaient s'y connecter, regarder des films en streaming, écouter des podcasts, échanger des messages, discuter via des forums, et avoir accès à des informations comme la météo locale.
 
-<h3>Bilan et pistes d'amélioration
+<h3>Bilan et pistes d'amélioration</h3>
 
 La réalisation de cet intranet a mis plus de temps que prévu, il n'a finalement pas été opérationnel pendant l'expérience. De plus, nous avons eu des problèmes liés au choix de l'antenne. L'intranet n'a donc pas pu être testé à l'échelle du quartier. Cependant, les essais que nous avons menés nous ont convaincus que ce type d'intranet avait un potentiel intéressant, notamment pour mutualiser du matériel et des savoir-faire entre voisins, se rendre des services, et tout simplement favoriser les rencontres et liens sociaux de quartier.
 
@@ -483,13 +537,15 @@ La réalisation de cet intranet a mis plus de temps que prévu, il n'a finalemen
 <details>
     <summary><h3>15. Fitness club</h3></summary>
 
+<Picture src={fitness} alt="Fitness club" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>Des machines de "fitness utile" pour garder la forme, tout en utilisant l'énergie déployée</h4>
 
 Plus de 4 millions de personnes sont membres d’un club de remise en forme ou de fitness en France . On y compte plus de 4 000 salles de fitness. Rameurs, vélos d’appartement, tapis, elliptiques... Ces machines pourraient, en même temps que nous permettre de garder la forme, avoir une seconde fonction en remplissant des tâches utiles.
 
 Nous avons imaginé que l'immeuble du futur pourrait avoir un espace commun entre les résidents, avec des machines de "fitness utile".
 
-<h3>Principe de fonctionnement
+<h3>Principe de fonctionnement</h3>
 
 Au premier étage de l'immeuble, nous avons aménagé toute une salle de sport avec des machines de fitness ayant différentes fonctions utiles : produire de l'électricité, moudre des graines, pétrir de la pâte à pain, laver le linge… C'est Johnny, du Low-tech Lab d'Auroville en Inde, qui a chapeauté l'organisation du Johnny Fitness Club.
 
@@ -502,12 +558,12 @@ Il a été conçu avec des étudiants de l'ICAM Grand Paris Sud. La base du rame
 - Vidanger.
 - Mettre de l'eau dans le tambour, puis ramer pendant 10 minutes, vitesse lente.
 - Vidanger à nouveau, puis ramer pendant 5 minutes à vitesse rapide pour l'essorage.
-  Avec ce cycle de 40 minutes, l'utilisateur aura ramé 8 kilomètres et réalisé sa lessive.
+Avec ce cycle de 40 minutes, l'utilisateur aura ramé 8 kilomètres et réalisé sa lessive.
 
 <h4>Bilan et pistes d'optimisation</h4>
 
 Nous avons mesuré son efficacité de lavage en comparant avec une machine de laverie. Nous avons mis des tissus avec des taches de vin, d'huile et de terre dans les deux machines, avec la même quantité de savon, même température de l'eau, et même temps de cycle. Le tissu lavé par notre rameur est ressorti plus propre.
-Nous sommes très satisfaits de cette machine qui est ergonomique, ludique, tout en étant efficace dans sa fonction.
+Nous sommes très satisfaits de cette machine qui est ergonomique, ludique, tout en étant efficace dans sa fonction. 
 
 <h4>Ceci dit, il reste quelques optimisations à apporter :</h4>
 
@@ -518,13 +574,15 @@ Nous sommes très satisfaits de cette machine qui est ergonomique, ludique, tout
 <details>
     <summary><h3>16. Terrasse solaire</h3></summary>
 
+<Picture src={terrasse} alt="Terrasse solaire" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>Un espace partagé pour profiter de l'énergie solaire</h4>
 
 Un mètre carré exposé au soleil équivaut à une puissance de plus de 1000 watts. Pour profiter de cette énergie gratuite et abondante pendant certains mois de l'année, nous avons imaginé que l'immeuble du futur serait pourvu d'espaces communs équipés de systèmes solaires.
 
 Nous avons donc aménagé une terrasse solaire au premier étage de l'immeuble. Elle était équipée d'une parabole solaire, un four solaire, ainsi qu'un déshydrateur solaire.
 
-<h3>Principe de fonctionnement
+<h3>Principe de fonctionnement</h3>
 
 Le déshydrateur solaire était muni d'un capteur solaire, c'est-à-dire un volume ou l'air était préchauffé par effet de serre, avant de remonter par convection naturelle dans une armoire dans laquelle étaient disposées des claies avec les tranches de fruits et légumes à déshydrater.
 
@@ -532,7 +590,7 @@ Le four solaire était un tube en double paroi de verre avec des réflecteurs (v
 
 La parabole solaire avait une surface d'environ un mètre carré, et concentrait les rayons sur une casserole. Il fallait orienter régulièrement la parabole face au soleil. Le système étant très puissant par beau temps, nous pouvions cuire tout ce qui peut être cuit à la casserole.
 
-<h3>Bilan et pistes d'amélioration
+<h3>Bilan et pistes d'amélioration</h3>
 
 Le déshydrateur solaire avec capteur est très adapté au climat de la région parisienne. Il permet de déshydrater des tranches de fruits et légumes avant qu'ils se perdent. Cette technique de déshydratation permet de conserver une bonne partie de la valeur nutritive des aliments. De plus, il demande peu de maintenance et est très facile à utiliser.
 
@@ -544,13 +602,15 @@ La parabole solaire est plus exigeante et moins sécure, car il faut rester à c
 <details>
     <summary><h3>17. Biodigesteur</h3></summary>
 
+<Picture src={biodigester} alt="Biodigesteur" formats={["avif", "webp", "jpeg"]} widths={[400, 800]} class="urbaine-image" />
+
 <h4>Produire du gaz et des engrais à partir de déchets organiques</h4>
 
 Nous avons voulu tester la production de gaz et d'engrais par méthanisation. Comme nos déchets de toilette et de cuisine étaient déjà valorisés par les larves de mouches soldat noires, nous avons demandé à une boulangerie du quartier de récupérer les invendus.
 
 Nous le nourrissions avec du pain sec mélangé aux eaux usées de l'évier de cuisine. L'objectif était de produire suffisamment de gaz pour les cuissons de nos poêlées de grillons et de champignons, que nous ne pouvions pas faire avec la cocotte du futur. Nous voulions aussi produire un engrais organique pour la ferme partenaire.
 
-<h3>Principe de fonctionnement
+<h3>Principe de fonctionnement</h3>
 
 Nous avons acheté un méthaniseur du commerce avec un volume de stockage de 700 litres de gaz non compressé. Nous l'avons installé en bas de l'immeuble. Après la période de démarrage, qui dure plusieurs semaines et demande à ajouter de la bouse de vache ou du crottin de cheval, nous avons commencé à obtenir du gaz.
 
@@ -558,11 +618,11 @@ Nous estimons la production à une demi-heure de gaz (avec un débit faible) par
 
 Le système a fonctionné pendant 2 mois (juillet et août), mais à partir de septembre la température a chuté, et le méthaniseur s'est arrêté de fonctionner.
 
-<h3>Bilan et pistes d'amélioration
+<h3>Bilan et pistes d'amélioration</h3>
 
 Nous étions extrêmement satisfaits du système pendant les deux mois de fonctionnement. Puis nous avons été déçus par son arrêt soudain.
-
 - Il aurait fallu isoler le biodigesteur, ou le mettre dans une serre , afin qu'il reste chaud plus longtemps. Ce n'était sans doute pas le modèle le plus adapté à notre climat.
 - L'opération de descendre le seau rempli d'eau usée de l'évier était un peu pénible. Il aurait été préférable d'avoir un tuyau d'évacuation directement connecté.
 - La réglementation actuelle ne permet pas d'installer un biodigesteur si proche des habitations. Nous avons pu le faire à titre expérimental.
 </details>
+

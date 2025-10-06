@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroPage from "../components/molecules/HeroPage.astro";
-import HeroUrbaine from "../assets/images/biosphere-experience-biosphere-urbaine.jpg";
+import HeroUrbaine from "../assets/images/hero/biosphere-experience-biosphere-urbaine.jpg";
 
-const { Content } = await import("../data/appartement-du-futur.md");
+const { Content } = await import("../data/appartement-du-futur.mdx");
 ---
 
 <BaseLayout pageTitle="Biosphère Urbaine">
@@ -26,8 +26,8 @@ const { Content } = await import("../data/appartement-du-futur.md");
         <li>Durée de l'expérience : 4 mois</li>
       </ul>
     </div>
-
-    <div><Content /></div>
+<h2>Les low-tech de l'appartement</h2>
+    <div class=" " ><Content /></div>
 
     <div class="col-start-1 pl-4">
       <h2 class="mt-0">Pour en savoir plus</h2>
