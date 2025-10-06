@@ -1,16 +1,144 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Picture } from "astro:assets";
+import HeroHome from "../components/molecules/HeroHome.astro";
+import cyberCactus from "../assets/images/Biosphere-du-desert_Cyber-Cactus_Credit--Corentin-De-Chatelperron-Low-tech-Lab.jpg";
+import desert from "../assets/images/biosphere-experience-biosphere-du-desert.jpg";
+import plateforme from "../assets/images/biosphere-experience-biosphere-plateforme.jpg";
+import urbaine from "../assets/images/biosphere-experience-biosphere-urbaine.jpg";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle="Accueil">
+  <HeroHome src={cyberCactus} alt="Biosphère Experience" />
+
+  <div
+    id="title"
+    class="flex items-center justify-center mt-0 sm:mt-0 mb-4 px-3 sm:ml-17"
+  >
+    <h1 class="flex flex-col gap-1 w-81 sm:w-98">
+      <span class="text-5xl sm:text-6xl font-bold uppercase">biosphere</span>
+      <span class="self-end text-3xl sm:text-4xl font-bold -mt-2 uppercase"
+        >experience</span
+      >
+    </h1>
+  </div>
+  <div class="content">
+    <div id="intro" class="sm:col-start-2">
+      <p>
+        Notre objectif est d'explorer un nouveau futur dans lequel les humains
+        interagissent avec d'autres espèces vivantes et les éléments. Nous
+        concevons et expérimentons des modes de vie plus justes, sains, durables
+        et conviviaux.
+      </p>
+      <a
+        href="#about"
+        class="mt-2 inline-block bg-primary text-white underline underline-offset-5"
+      >
+        En savoir plus
+      </a>
+    </div>
+
+    <div
+      id="plateforme"
+      class="col-span-full grid gap-3 sm:col-span-2 sm:contents"
+    >
+      <div class="sm:col-start-1 max-w-[70vw] mx-auto">
+        <Picture
+          src={plateforme}
+          alt="Biosphère Experience-biosphere-plateforme"
+          formats={["avif", "webp", "jpeg"]}
+          widths={[300, 800]}
+        />
+      </div>
+
+      <div class="sm:col-start-2">
+        <h2 class="flex flex-col">
+          <span class="text-xl font-bold uppercase">biosphère</span>
+          <span class="text-3xl font-bold -mt-1 uppercase">plateforme</span>
+        </h2>
+        <p class="mb-0">2018</p>
+        <p class="mb-2">Baie de Phang Nga, Thaïlande</p>
+        <p class="text-sm mb-0">
+          Pendant le tour du monde avec le catamaran-laboratoire Nomade des
+          Mers, Corentin expérimente pendant 4 mois un premier écosystème
+          low-tech sur une plateforme flottante en bambou.
+        </p>
+        <a
+          href="/biosphere-plateforme"
+          class="mt-2 inline-block underline underline-offset-5"
+        >
+          En savoir plus
+        </a>
+      </div>
+    </div>
+
+    <div id="desert" class="col-span-full grid gap-6 sm:col-span-2 sm:contents">
+      <div class="sm:col-start-1 max-w-[70vw] mx-auto">
+        <Picture
+          src={desert}
+          alt="Biosphère Experience"
+          class="col-start-2 col-end-4"
+          formats={["avif", "webp", "jpeg"]}
+          sizes="(max-width: 600px) 100vw, 50vw"
+          widths={[300, 800]}
+        />
+      </div>
+
+      <div class="sm:col-start-2">
+        <h2 class="flex flex-col">
+          <span class="text-xl font-bold uppercase">biosphère</span>
+          <span class="text-3xl font-bold -mt-1 uppercase">du désert</span>
+        </h2>
+        <p class="mb-0">2022</p>
+        <p class="mb-2">Désert de Basse-Californie, Mexique</p>
+        <p class="mb-0 text-sm">
+          Avec Caroline Pultz, pendant 4 mois, ils testent une nouvelle version
+          de l'écosystème Biosphère en milieu aride.
+        </p>
+        <a
+          href="/biosphere-du-desert"
+          class="mt-2 inline-block underline underline-offset-5"
+        >
+          En savoir plus
+        </a>
+      </div>
+    </div>
+
+    <div
+      id="urbaine"
+      class="col-span-full grid gap-6 sm:col-span-2 sm:contents"
+    >
+      <div class="sm:col-start-1 max-w-[70vw] mx-auto">
+        <Picture
+          src={urbaine}
+          alt="Biosphère Experience"
+          class="col-start-2 col-end-4"
+          formats={["avif", "webp", "jpeg"]}
+          widths={[300, 800]}
+        />
+      </div>
+
+      <div class="sm:col-start-2">
+        <h2 class="flex flex-col">
+          <span class="text-xl font-bold uppercase">biosphère</span>
+          <span class="text-3xl font-bold -mt-1 uppercase">urbaine</span>
+        </h2>
+        <p class="mb-0">2024</p>
+        <p class="mb-2">Boulogne-Billancourt, région parisienne</p>
+        <p class="mb-0 text-sm">
+          L'équipe adapte le concept Biosphère aux zones urbaines denses, en
+          aménageant un habitat-écosystème dans un appartement, lié à un réseau
+          d'acteurs locaux.
+        </p>
+        <a
+          href="/biosphere-urbaine"
+          class="mt-2 inline-block underline underline-offset-5"
+        >
+          En savoir plus
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style></style>

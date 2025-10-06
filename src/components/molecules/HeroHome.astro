@@ -1,0 +1,25 @@
+---
+
+import { Picture } from "astro:assets";
+
+const { src, alt = "Biosphère Experience" } = Astro.props;
+---
+
+<div id="hero" class=" hero-wrapper">
+  <Picture
+    src={src}
+    alt={alt}
+    class="w-full h-full object-cover object-bottom"
+    formats={["avif", "webp", "jpeg"]}
+    sizes="100vw"
+    widths={[1200, 5000]}
+  />
+</div>
+
+<style>
+  .hero-wrapper {
+    height: clamp(420px, calc(420px + (2000 - 420) * ((100vw - 320px) / (5120 - 320))), 600px);
+  }
+
+
+</style>

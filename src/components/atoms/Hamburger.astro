@@ -1,0 +1,57 @@
+---
+const { class: className = "" } = Astro.props;
+---
+
+<button
+  id="menu-toggle"
+  aria-expanded="false"
+  aria-controls="menu"
+  aria-label="Toggle menu"
+  class={`menu-toggle ${className}`}
+>
+  <div class="hamburger" id="hamburger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</button>
+
+<style is:global>
+  .menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: .8rem 0 .8rem 1rem;
+    color: inherit;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle[aria-expanded="true"] .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+</style>

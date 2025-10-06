@@ -1,0 +1,88 @@
+---
+import { siteInfo } from "../../data/SiteData";
+import YoutubeIcon from "../../assets/icons/youtube.svg";
+import InstagramIcon from "../../assets/icons/instagram.svg";
+import LinkedInIcon from "../../assets/icons/linkedin.svg";
+import SoberStudio from "../../assets/logos/soberStudio-logo.svg";
+---
+
+<footer class="w-full flex flex-col gap-0 items-center justify-between text-sm mt-10 px-4 py-10">
+  <div id="footer-links" class="flex flex-col items-center gap-3 ">
+    <div class="flex flex-row sm:flex-row items-center gap-3 sm:gap-5">
+    <a
+      class="whitespace-nowrap"
+      href="/"
+      aria-label="equipte-partenaires"
+    >
+      Équipe et partenaires
+    </a>
+
+    <div>
+      <span class="whitespace-nowrap"
+        ><a
+          href="/"
+          aria-label="equipte-partenaires"
+          target="_blank"
+          rel="noopener"
+        >
+          Site web éco-conçu</a
+        ></span
+      >
+      
+    
+    </div>
+    </div>
+    
+    <div class="">
+      <a href={`mailto:${siteInfo.email}`} class="no-underline"> contact@biosphere-experience.org </a>
+    </div>
+  </div>
+
+  <div id="socials" class="flex flex-row items-center justify-center">
+  <ul class="flex justify-center gap-6 p-3">
+    <li class="flex items-center justify-center">
+      <a
+        href={siteInfo.social.youtube}
+        target="_blank"
+        rel="noopener"
+        aria-label="YouTube"
+      >
+        <YoutubeIcon width={35} height={35} fill="currentColor" />
+      </a>
+    </li>
+    <li class="flex items-center justify-center">
+      <a
+        href={siteInfo.social.instagram}
+        target="_blank"
+        rel="noopener"
+        aria-label="Instagram"
+      >
+        <InstagramIcon width={30} height={30} fill="currentColor" />
+      </a>
+    </li>
+    <li class="flex items-center justify-center">
+      <a
+        href={siteInfo.social.linkedin}
+        target="_blank"
+        rel="noopener"
+        aria-label="LinkedIn"
+      >
+        <LinkedInIcon width={30} height={30} fill="currentColor" />
+      </a>
+    </li>
+  </ul>
+  </div>
+  <div>
+      <span class="text-xs font-bold"
+        ><a
+          href="https://soberstudio.dev"
+          aria-label="Sober Studio"
+          target="_blank"
+          rel="noopener"
+          class="no-underline"
+        >
+         Sober Studio
+        </a></span
+      >
+  </div>
+</footer>

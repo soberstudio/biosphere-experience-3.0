@@ -1,0 +1,78 @@
+---
+import "../styles/global.css";
+import { siteInfo } from "../data/SiteData";
+import Header from "../components/molecules/Header.astro";
+import Footer from "../components/molecules/Footer.astro";
+
+const siteName = siteInfo.name;
+const baseUrl = siteInfo.url;
+
+const {
+  pageTitle = "Bienvenue sur Biosphère Experience",
+  canonicalUrl,
+  description = siteInfo.description,
+}: {
+  pageTitle?: string;
+  canonicalUrl?: string;
+  description?: string;
+} = Astro.props;
+
+// Compute canonical URL dynamically if not provided
+const computedCanonicalUrl = canonicalUrl || baseUrl + Astro.url.pathname;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="robots" href="/robots.txt" />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle} | {siteName}</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={siteInfo.keywords} />
+    <meta name="author" content={siteInfo.author} />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${pageTitle} | ${siteName}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={computedCanonicalUrl} />
+    <meta
+      property="og:image"
+      content={`${baseUrl}/biosphere-experience-og.jpg`}
+    />
+    <meta property="og:site_name" content={siteName} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${pageTitle} | ${siteName}`} />
+    <meta name="twitter:description" content={description} />
+    <meta
+      name="twitter:image"
+      content={`${baseUrl}/biosphere-experience-og.jpg`}
+    />
+    <meta name="twitter:site" content="@yourtwitterhandle" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={computedCanonicalUrl} />
+
+    <!-- iOS Safari Status Bar -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

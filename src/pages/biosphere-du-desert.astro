@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroPage from "../components/molecules/HeroPage.astro";
+import HeroDesert from "../assets/images/biosphere-experience-biosphere-du-desert.jpg";
+---
+
+<BaseLayout pageTitle="Biosphère du Désert">
+  <HeroPage src={HeroDesert} alt="Biosphère du Désert" />
+  <div class="container flex flex-col mx-auto gap-6">
+    <div id="title">
+      <h1 class="flex flex-col gap-1 w-81 sm:w-102">
+        <span class="text-5xl sm:text-6xl font-bold uppercase">biosphere</span>
+        <span class="self-end text-3xl sm:text-4xl font-bold -mt-2 uppercase"
+          >du désert</span
+        >
+      </h1>
+    </div>
+
+    <div class="col-start-1 border-l border-accent pl-4">
+      <h2 class="mt-0 font-bold">Informations clés</h2>
+      <ul class="list-disc list-inside mt-2">
+        <li>Lieu : Mexique, désert de Basse Californie</li>
+        <li>Date : premier semestre 2022</li>
+        <li>Durée de l'expérience : 4 mois</li>
+      </ul>
+    </div>
+
+    <div class="col-start-1 pl-4">
+      <h2 class="mt-0 font-bold">Pour en savoir plus</h2>
+      <ul class="list-disc list-inside mt-2">
+        <li>La web-série et le film Arte “La Biosphère du désert”</li>
+        <li>
+          Le rapport technique <a
+            href="/rapports/Rapport-Biosphere-du-desert.pdf"
+            download>télécharger ici</a>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+</BaseLayout>
