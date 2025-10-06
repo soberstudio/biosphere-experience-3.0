@@ -1,7 +1,7 @@
 export const siteInfo = {
-  name: "Biosphere Experience",
-  url: "https://biosphere-experience.org/",
-  description: "Il existe des technologies et savoir-faire innovants, accessibles à tous et durables pour répondre à nos besoins.",
+  name: "BIOSPHERE EXPERIENCE",
+  url: import.meta.env.SITE || "https://biosphere-experience.org/",
+  description: "Notre objectif est d'explorer un nouveau futur dans lequel les humains interagissent avec d'autres espèces vivantes et les éléments. Nous concevons et expérimentons des modes de vie plus justes, sains, durables et conviviaux.",
   keywords: "low-tech, durabilité, innovation, autonomie, vie urbaine, économie circulaire, réduction des déchets, énergies renouvelables, science participative, mode de vie écologique",
   author: "Biosphère Experience",
   email: "contact@biosphere-experience.org",
@@ -10,5 +10,5 @@ export const siteInfo = {
     linkedin: "https://www.linkedin.com/company/biosphere-experience",
     instagram: "https://www.instagram.com/biosphere.experience",
   },
- 
+
 }

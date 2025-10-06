@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://biosphere-experience.com', // Your production URL
+  site: 'https://biosphere-experience.org', // Your production URL
   integrations: [sitemap()],
   devToolbar: {
     enabled: false

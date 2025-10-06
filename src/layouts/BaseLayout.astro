@@ -5,7 +5,8 @@ import Header from "../components/molecules/Header.astro";
 import Footer from "../components/molecules/Footer.astro";
 
 const siteName = siteInfo.name;
-const baseUrl = siteInfo.url;
+const siteUrl = Astro.site?.origin || siteInfo.url;
+const currentUrl = Astro.url.origin; // For OG images to work on preview URLs
 
 const {
   pageTitle = "Bienvenue sur Biosphère Experience",
@@ -18,7 +19,7 @@ const {
 } = Astro.props;
 
 // Compute canonical URL dynamically if not provided
-const computedCanonicalUrl = canonicalUrl || baseUrl + Astro.url.pathname;
+const computedCanonicalUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl).href;
 ---
 
 <html lang="en">
@@ -46,7 +47,7 @@ const computedCanonicalUrl = canonicalUrl || baseUrl + Astro.url.pathname;
     <meta property="og:url" content={computedCanonicalUrl} />
     <meta
       property="og:image"
-      content={`${baseUrl}/biosphere-experience-og.jpg`}
+      content={`${currentUrl}/biosphere-experience-og.jpg`}
     />
     <meta property="og:site_name" content={siteName} />
 
@@ -56,7 +57,7 @@ const computedCanonicalUrl = canonicalUrl || baseUrl + Astro.url.pathname;
     <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
-      content={`${baseUrl}/biosphere-experience-og.jpg`}
+      content={`${currentUrl}/biosphere-experience-og.jpg`}
     />
     <meta name="twitter:site" content="@yourtwitterhandle" />
 
