@@ -6,7 +6,8 @@ import Footer from "../components/molecules/Footer.astro";
 
 const siteName = siteInfo.name;
 const siteUrl = Astro.site?.origin || siteInfo.url;
-const currentUrl = Astro.url.origin; // For OG images to work on preview URLs
+// Use CF_PAGES_URL for preview deployments, fallback to site URL
+const currentUrl = import.meta.env.CF_PAGES_URL || siteUrl;
 
 const {
   pageTitle = "Bienvenue sur Biosphère Experience",
