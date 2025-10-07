@@ -69,6 +69,14 @@ const computedCanonicalUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- Prevent flash of unstyled content -->
+    <script is:inline>
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'low-contrast') {
+        document.documentElement.setAttribute('data-theme', 'low-contrast');
+      }
+    </script>
   </head>
   <body>
     <Header />

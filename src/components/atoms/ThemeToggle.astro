@@ -1,0 +1,91 @@
+---
+---
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+  <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Sun rays -->
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    <!-- Center circle - will be filled or outlined based on theme -->
+    <circle class="sun-center" cx="12" cy="12" r="5"></circle>
+  </svg>
+</button>
+
+<style>
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: var(--theme-text);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sun-icon {
+    transition: transform 0.3s ease;
+  }
+
+  /* High contrast - filled center */
+  .sun-center {
+    fill: currentColor;
+    transition: fill 0.2s ease;
+  }
+
+  /* Low contrast - outlined center */
+  :root[data-theme="low-contrast"] .sun-center {
+    fill: none;
+  }
+
+  /* Hover effects - show opposite state (only on devices with hover support) */
+  @media (hover: hover) {
+    .theme-toggle:hover .sun-center {
+      fill: none;
+    }
+
+    :root[data-theme="low-contrast"] .theme-toggle:hover .sun-center {
+      fill: currentColor;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const sunIcon = toggle?.querySelector('.sun-icon') as SVGElement;
+  let rotation = 0;
+
+  function setTheme(theme: 'high-contrast' | 'low-contrast') {
+    if (theme === 'low-contrast') {
+      document.documentElement.setAttribute('data-theme', 'low-contrast');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('theme', theme);
+  }
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem('theme') as 'high-contrast' | 'low-contrast' | null;
+  if (savedTheme) {
+    setTheme(savedTheme);
+  }
+
+  // Toggle theme
+  toggle?.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    setTheme(currentTheme === 'low-contrast' ? 'high-contrast' : 'low-contrast');
+
+    // Rotate icon 90deg on click
+    rotation += 90;
+    if (sunIcon) {
+      sunIcon.style.transform = `rotate(${rotation}deg)`;
+    }
+  });
+</script>

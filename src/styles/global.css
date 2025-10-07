@@ -19,6 +19,21 @@
     --height-header: 4rem;
 
 }
+
+/* Theme variables */
+:root {
+    /* High contrast theme (default) */
+    --theme-bg: black;
+    --theme-text: var(--color-gray-200);
+    --theme-accent: oklch(0.6942 0.1529 56.68);
+}
+
+:root[data-theme="low-contrast"] {
+    /* Low contrast theme */
+    --theme-bg: black;
+    --theme-text: #8f8e8e;
+    --theme-accent: oklch(0.6942 0.1529 56.68);
+}
 @layer base {
 
 /* typography */
@@ -61,11 +76,12 @@ h4{
 
 body{
 
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
 }
 
 a{
+    color: var(--theme-text);
     text-decoration: underline;
     text-underline-offset: 5px;
 }
