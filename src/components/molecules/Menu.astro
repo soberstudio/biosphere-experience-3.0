@@ -53,7 +53,6 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
     menuButton?.setAttribute('aria-expanded', 'false');
     menu?.classList.remove('open');
     overlay?.classList.remove('open');
-    document.body.style.overflow = '';
   }
 
   menuButton?.addEventListener('click', () => {
@@ -63,11 +62,9 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
     if (isExpanded) {
       menu?.classList.remove('open');
       overlay?.classList.remove('open');
-      document.body.style.overflow = '';
     } else {
       menu?.classList.add('open');
       overlay?.classList.add('open');
-      document.body.style.overflow = 'hidden';
     }
   });
 
