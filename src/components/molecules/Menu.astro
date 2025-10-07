@@ -52,12 +52,20 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
   function closeMenu() {
     menuButton?.setAttribute('aria-expanded', 'false');
     menu?.classList.remove('open');
+    document.body.style.overflow = '';
   }
 
   menuButton?.addEventListener('click', () => {
     const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!isExpanded));
-    isExpanded ? menu?.classList.remove('open') : menu?.classList.add('open');
+
+    if (isExpanded) {
+      menu?.classList.remove('open');
+      document.body.style.overflow = '';
+    } else {
+      menu?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
   });
 
   // Close menu on: nav links, Escape key, or outside click
@@ -73,7 +81,7 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.65);
+
     color: var(--theme-text);
     display: flex;
     align-items: center;

@@ -24,7 +24,7 @@
 :root {
     /* High contrast theme (default) */
     --theme-bg: black;
-    --theme-text: var(--color-gray-200);
+    --theme-text: white;
     --theme-accent: oklch(0.6942 0.1529 56.68);
 }
 
