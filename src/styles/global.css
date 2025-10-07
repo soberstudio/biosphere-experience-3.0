@@ -8,9 +8,7 @@
 
 /* colors */
 
-    --color-bg: black;
-    --color-bg-1: #161616;
-    --color-text: var(--color-gray-200);
+
     --color-accent: oklch(0.6942 0.1529 56.68);
 
 
@@ -25,14 +23,14 @@
     /* High contrast theme (default) */
     --theme-bg: black;
     --theme-text: white;
-    --theme-accent: oklch(0.6942 0.1529 56.68);
+
 }
 
 :root[data-theme="low-contrast"] {
     /* Low contrast theme */
     --theme-bg: black;
     --theme-text: #8f8e8e;
-    --theme-accent: oklch(0.6942 0.1529 56.68);
+
 }
 @layer base {
 
@@ -41,8 +39,8 @@
 p{
     font-size: 1rem;
     line-height: 1.75rem;
-    margin-bottom: .5rem;
-    margin-top: 0;
+
+    margin-top: 1rem;
 }
 
 
@@ -62,11 +60,11 @@ h3{
 }
 
 h4{
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 

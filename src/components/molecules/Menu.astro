@@ -9,8 +9,8 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
 
 <div id="menu-overlay" class="menu-overlay"></div>
 <nav id="menu" class="menu">
-  <div class="flex flex-row items-center justify-between gap-2 border-b border-neutral-900 w-full px-4 py-4">
-    <p class="mb-0">Contraste </p><ThemeToggle />
+  <div class="flex flex-row items-center justify-between gap-2 border-b bg-bg border-neutral-900 w-full px-4 py-4">
+    <p class="mt-0">Contraste </p><ThemeToggle />
   </div>
   <ul class="flex flex-col gap-8  py-10 px-12 uppercase [&_a]:no-underline">
     <li><a href="/historique" class="">L'histoire biosphère</a></li>
@@ -103,8 +103,10 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
     display: flex;
     flex-direction: column;
     border-radius: 0.75rem;
-    border: 1px solid #171717;
-    background: var(--color-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: var(--theme-text);
     align-items: center;
     justify-content: center;
