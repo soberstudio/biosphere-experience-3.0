@@ -90,7 +90,7 @@ const computedCanonicalUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl
       let lastScroll = 0;
       let scrollUpStart = 0;
       const header = document.querySelector('header');
-      const threshold = 00; // pixels to scroll up before showing header
+      const threshold = 50; // pixels to scroll up before showing header
       const bgStart = 400; // start fading in background
       const bgEnd = 405; // fully opaque at this point
 
