@@ -4,32 +4,32 @@
 @theme{
 
 
+/* sizes */
+  --height-header: 4rem;
 
 
 /* colors */
-
-
-    --color-accent: oklch(0.6942 0.1529 56.68);
-
-
-/* sizes */
-
-    --height-header: 4rem;
+ --color-accent: oklch(0.6942 0.1529 56.68);
+ --color-bg: var(--theme-bg);
+ --color-text: var(--theme-text);
+ --color-headings: var(--theme-headings);
 
 }
 
 /* Theme variables */
 :root {
     /* High contrast theme (default) */
-    --theme-bg: black;
-    --theme-text: white;
+  --theme-bg: black;
+  --theme-text: hsl(0, 0%, 80%);
+  --theme-headings: hsl(0, 0%, 100%);
 
 }
 
 :root[data-theme="low-contrast"] {
     /* Low contrast theme */
-    --theme-bg: black;
-    --theme-text: #8f8e8e;
+  --theme-bg: black;
+  --theme-text: hsl(0, 0%, 55%);
+  --theme-headings: hsl(0, 0%, 65%);
 
 }
 @layer base {
@@ -43,8 +43,12 @@ p{
     margin-top: 1rem;
 }
 
+h1{
+  color: var(--theme-headings);
+}
 
 h2{
+  color: var(--theme-headings);
     font-size: 1.25rem;
     line-height: 1.5rem;
     font-weight: 700;
@@ -60,6 +64,7 @@ h3{
 }
 
 h4{
+  color: var(--theme-headings);
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.75rem;
