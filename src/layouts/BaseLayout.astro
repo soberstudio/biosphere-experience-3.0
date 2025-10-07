@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { siteInfo } from "../data/SiteData";
 import Header from "../components/molecules/Header.astro";
 import Footer from "../components/molecules/Footer.astro";
+import Menu from "../components/molecules/Menu.astro";
 
 const siteName = siteInfo.name;
 const siteUrl = Astro.site?.origin || siteInfo.url;
@@ -80,6 +81,7 @@ const computedCanonicalUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl
   </head>
   <body>
     <Header />
+    <Menu />
     <main>
       <slot />
     </main>
@@ -88,7 +90,7 @@ const computedCanonicalUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl
       let lastScroll = 0;
       let scrollUpStart = 0;
       const header = document.querySelector('header');
-      const threshold = 200; // pixels to scroll up before showing header
+      const threshold = 100; // pixels to scroll up before showing header
 
       if (header) {
         window.addEventListener('scroll', () => {
