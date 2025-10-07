@@ -12,13 +12,13 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
   <div class="flex flex-row items-center justify-between gap-2 border-b border-neutral-900 w-full px-4 py-2">
     <p class="mt-0">Contraste </p><ThemeToggle />
   </div>
-  <ul class="flex flex-col gap-4 list-none ml-0 py-5 px-14 uppercase [&_a]:no-underline">
-    <li><a href="/historique" class="">L'histoire biosphère</a></li>
-    <li><a href="/biosphere-plateforme" class="">Biosphère plateforme</a></li>
-    <li><a href="/biosphere-du-desert" class="">Biosphère du désert</a></li>
-    <li><a href="/biosphere-urbaine" class="">Biosphère urbaine</a></li>
-    <li><a href="/equipe-partenaires" class="">Équipe et partenaires</a></li>
-    <li><a href="/site-eco-concu" class="">Site web éco-conçu</a></li>
+  <ul class="flex flex-col gap-4 list-none ml-0 py-5 px-12 uppercase [&_a]:no-underline">
+    <li><a href="/historique" class="hover:text-white">L'histoire biosphère</a></li>
+    <li><a href="/biosphere-plateforme" class="hover:text-white">Biosphère plateforme</a></li>
+    <li><a href="/biosphere-du-desert" class="hover:text-white">Biosphère du désert</a></li>
+    <li><a href="/biosphere-urbaine" class="hover:text-white">Biosphère urbaine</a></li>
+    <li><a href="/equipe-partenaires" class="hover:text-white">Équipe et partenaires</a></li>
+    <li><a href="/site-eco-concu" class="hover:text-white">Site web éco-conçu</a></li>
   </ul>
   <ul class="flex gap-6 w-full justify-between list-none ml-0 p-8 border-t border-neutral-900 social-links">
     <li>
@@ -124,5 +124,9 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
   .menu.open {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .social-links a:hover svg {
+    fill: white;
   }
 </style>
