@@ -15,7 +15,7 @@
 :root {
   /* High contrast theme (default) */
   --theme-bg: black;
-  --theme-text: hsl(0, 0%, 80%);
+  --theme-text: hsl(0, 0%, 100%);
   --theme-headings: hsl(0, 0%, 100%);
 }
 
