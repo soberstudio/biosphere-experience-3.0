@@ -1,7 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroPage from "../components/molecules/HeroPage.astro";
+import { Picture } from "astro:assets";
 import Heroequipe from "../assets/images/hero/biosphere-experience-equipe.jpg";
+import boulogneLogo from "../assets/images/partenaires/boulogne-billancourt-logo.svg";
+import arteLogo from "../assets/images/partenaires/arte-logo.svg";
+import lowTechLogo from "../assets/images/partenaires/low-tech-lab-logo.svg";
+import exploreLogo from "../assets/images/partenaires/explore-logo.svg";
+import cnesLogo from "../assets/images/partenaires/cnes-logo.png";
+import unescoLogo from "../assets/images/partenaires/unesco-green-citizen-logo.png";
+import icamLogo from "../assets/images/partenaires/icam-logo.png";
+import maintenantLogo from "../assets/images/partenaires/maintenant-logo.webp";
 ---
 
 <BaseLayout pageTitle="Biosphère Équipe">
@@ -60,51 +69,62 @@ import Heroequipe from "../assets/images/hero/biosphere-experience-equipe.jpg";
         partenaires
       </h2>
     </div>
-
+<div class="grid grid-cols-1 sm:grid-cols-[200px_minmax(0,400px)] gap-10 sm:gap-x-8 sm:gap-y-20 sm:justify-center sm:mx-auto">
+      <Picture src={boulogneLogo} alt="Boulogne-Billancourt" formats={["svg"]} class="max-w-[200px] sm:self-start sm:justify-self-end" />
       <p>
-        La ville de Boulogne-Billancourt accompagne l’innovation low-tech depuis
+        La ville de Boulogne-Billancourt accompagne l'innovation low-tech depuis
         2019, notamment via la Maison de la Planète, un lieu unique de
         démonstration de la démarche low-tech en Île-de-France. Elle apporte un
         soutien financier et logistique à l'association.
       </p>
 
+      <Picture src={arteLogo} alt="Arte" formats={["svg"]} class="max-w-[200px] sm:self-start sm:justify-self-end" />
       <p>
         Arte et la société de production Mediatika suivent les aventures de
         Corentin depuis 2016. Plus de 30 documentaires ont été diffusés à ce
         jour.
       </p>
 
+      <Picture src={lowTechLogo} alt="Low-tech Lab" formats={["svg"]} class="max-w-[100px] sm:self-start sm:justify-self-end" />
       <p>
-        Le Low-tech Lab est l’acteur incontournable pour le partage de
+        Le Low-tech Lab est l'acteur incontournable pour le partage de
         documentation technique sur les low-tech. Tous les tutoriels des
         expériences Biosphère sont recensés sur la plateforme wiki du Low-tech
         Lab.
       </p>
 
+      <Picture src={icamLogo} alt="ICAM" formats={["avif", "webp", "png"]} widths={[200, 400]} class="max-w-[200px] sm:self-start sm:justify-self-end" />
       <p>
-        L’ICAM est une école d'ingénieur généraliste très impliquée dans la
+        L'ICAM est une école d'ingénieur généraliste très impliquée dans la
         recherche et développement sur les innovation développées dans les
         expériences Biosphère.
       </p>
 
+      <Picture src={cnesLogo} alt="CNES" formats={["avif", "webp", "png"]} widths={[200, 400]} class="max-w-[200px] sm:self-start sm:justify-self-end" />
       <p>
         Le CNES, l'agence spatiale française, met à profit de l'association son
         expertise pointue sur les CELSS (Closed Ecological Life Support
         Systems).
       </p>
 
+      <Picture src={maintenantLogo} alt="Maintenant!" formats={["avif", "webp"]} widths={[200, 400]} class="max-w-[150px] sm:self-start sm:justify-self-end" />
       <p>
         Cabinet d'expert-comptable et de conseil en stratégie, le groupe
         Maintenant! apporte son soutien à la gestion administrative de
         l'association.
       </p>
+
+      <Picture src={exploreLogo} alt="Explore" formats={["svg"]} class="max-w-[200px] sm:self-start sm:justify-self-end" />
       <p>
         Le Fonds de dotation Explore est un partenaire historique de
         l'association, en apportant conseils et soutiens logistiques.
       </p>
+
+      <Picture src={unescoLogo} alt="UNESCO" formats={["avif", "webp", "png"]} widths={[200, 400]} class="max-w-[200px] sm:self-start sm:justify-self-end" />
       <p>
-        L’UNESCO soutient l'association via son programme UNESCO Green Citizens.
+        L'UNESCO soutient l'association via son programme UNESCO Green Citizens.
       </p>
+      </div>
     </div>
   </div>
 </BaseLayout>

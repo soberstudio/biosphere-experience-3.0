@@ -76,5 +76,32 @@ const computedCanonicalUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl
       <slot />
     </main>
     <Footer />
+    <script>
+      let lastScroll = 0;
+      let scrollUpStart = 0;
+      const header = document.querySelector('header');
+      const threshold = 200; // pixels to scroll up before showing header
+
+      if (header) {
+        window.addEventListener('scroll', () => {
+          const currentScroll = window.pageYOffset;
+
+          if (currentScroll <= 0) {
+            header.style.transform = 'translateY(0)';
+          } else if (currentScroll > lastScroll) {
+            // Scrolling down
+            header.style.transform = 'translateY(-100%)';
+            scrollUpStart = currentScroll;
+          } else {
+            // Scrolling up
+            if (scrollUpStart - currentScroll > threshold) {
+              header.style.transform = 'translateY(0)';
+            }
+          }
+
+          lastScroll = currentScroll;
+        });
+      }
+    </script>
   </body>
 </html>
