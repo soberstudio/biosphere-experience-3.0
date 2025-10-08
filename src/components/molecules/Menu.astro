@@ -9,18 +9,18 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
 
 <div id="menu-overlay" class="menu-overlay"></div>
 <nav id="menu" class="menu">
-  <div class="flex flex-row items-center justify-between gap-2 border-b border-neutral-900 w-full px-4 py-2">
+  <div class="flex flex-row items-center justify-between gap-2 border-b border-neutral-900 w-full px-8 py-3">
     <p class="mt-0">Contraste </p><ThemeToggle />
   </div>
-  <ul class="flex flex-col gap-4 list-none ml-0 py-5 px-12 uppercase [&_a]:no-underline">
-    <li><a href="/historique" class="hover:text-white">L'histoire biosphère</a></li>
-    <li><a href="/biosphere-plateforme" class="hover:text-white">Biosphère plateforme</a></li>
-    <li><a href="/biosphere-du-desert" class="hover:text-white">Biosphère du désert</a></li>
-    <li><a href="/biosphere-urbaine" class="hover:text-white">Biosphère urbaine</a></li>
-    <li><a href="/equipe-partenaires" class="hover:text-white">Équipe et partenaires</a></li>
-    <li><a href="/site-eco-concu" class="hover:text-white">Site web éco-conçu</a></li>
+  <ul class="flex flex-col gap-4 list-none ml-0 py-5 px-8 uppercase [&_a]:no-underline">
+    <li><a href="/historique" class="tracking-widest hover:text-white">L'histoire biosphère</a></li>
+    <li><a href="/biosphere-plateforme" class="tracking-widest hover:text-white">Biosphère plateforme</a></li>
+    <li><a href="/biosphere-du-desert" class="tracking-widest hover:text-white">Biosphère du désert</a></li>
+    <li><a href="/biosphere-urbaine" class="tracking-widest hover:text-white">Biosphère urbaine</a></li>
+    <li><a href="/equipe-partenaires" class="tracking-widest hover:text-white">Équipe et partenaires</a></li>
+    <li><a href="/site-eco-concu" class="tracking-widest hover:text-white">Site web éco-conçu</a></li>
   </ul>
-  <ul class="flex gap-6 w-full justify-between list-none ml-0 p-8 border-t border-neutral-900 social-links">
+  <ul class="flex gap-6 w-full justify-between items-center list-none ml-0 px-8 py-4 border-t border-neutral-900 social-links">
     <li>
       <a href={`mailto:${siteInfo.email}`} aria-label="Email">
         <Email width={25} height={25} fill="var(--theme-text)"/>
@@ -28,7 +28,7 @@ import ThemeToggle from '../atoms/ThemeToggle.astro';
     </li>
     <li>
       <a href={siteInfo.social.youtube} target="_blank" rel="noopener" aria-label="YouTube">
-        <YoutubeIcon width={25} height={25} fill="var(--theme-text)"/>
+        <YoutubeIcon width={30} height={30} fill="var(--theme-text)"/>
       </a>
     </li>
     <li>
