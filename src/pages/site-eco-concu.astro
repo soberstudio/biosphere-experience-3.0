@@ -3,13 +3,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroPage from "../components/molecules/HeroPage.astro";
 import { Picture } from "astro:assets";
 import Heroequipe from "../assets/images/hero/biosphere-experience-equipe.jpg";
+import soberLogo from "../assets/logos/SoberStudio-logo.svg";
 ---
 
 <BaseLayout pageTitle="Biosphère Équipe">
   <HeroPage src={Heroequipe} alt="Biosphère Équipe" />
   <div class="container flex flex-col mx-auto gap-6">
     <div id="title" class="mb-6">
-      <h1 class="flex flex-col gap-1 w-81 sm:w-102">
+      <h1 class="flex flex-col gap-1 w-74 sm:w-102">
         <span class="text-5xl sm:text-6xl font-bold uppercase">Site web</span>
         <span class="self-end text-3xl sm:text-4xl font-bold -mt-2 uppercase"
           >éco conçu</span
@@ -17,7 +18,11 @@ import Heroequipe from "../assets/images/hero/biosphere-experience-equipe.jpg";
       </h1>
     </div>
 <div class="prose max-w-none">
-     <h2>Documentations écologiques</h2>
+     <h2 class="mt-0">Un site éthique et ultra performant</h2>
+
+<p> En collaboration avec <span><a href="https://soberstudio.dev" target="_blank" rel="noopener noreferrer" class="font-bold">Sober Studio</a></span> nous avons pris le soins de construire notre site internet de la mannière la plus éthique possible. Non seulement nous avons optimisé le code pour réduire son empreinte carbone, mais nous avons également choisi des hébergeurs écologiques et mis en place des pratiques de développement durable.</p>
+
+   <h2>Considérations écologiques</h2>
 
   <p>Les estimations de l'impact climatique de l'industrie du web varient entre <a href="https://www.sciencefocus.com/science/what-is-the-carbon-footprint-of-the-internet/" 
   target="_blank" rel="noopener noreferrer">2 %</a> et <a href="https://www.bbc.com/future/article/20200305-why-your-internet-habits-are-not-as-clean-as-you-think" 
@@ -75,6 +80,12 @@ import Heroequipe from "../assets/images/hero/biosphere-experience-equipe.jpg";
     <div class="">
       <h2 class="mt-0 font-bold">Pour en savoir plus</h2>
       <ul class="list-disc list-inside">
+             <li>
+          <a
+            href="https://www.soberstudio.dev/"
+            target="_blank"
+            rel="noopener noreferrer">Site de Sober Studio</a>
+        </li>
         <li>
           <a
             href="https://www.websitecarbon.com/"
