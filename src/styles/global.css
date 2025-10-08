@@ -44,24 +44,18 @@
     font-size: 1.25rem;
     line-height: 1.5rem;
     font-weight: 700;
-        margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: .8rem;
   }
 
   h3 {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    margin: 0;
-  }
-
-  h4 {
-    color: var(--theme-headings);
     font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.75rem;
+    line-height: 2rem;
     margin-top: 2rem;
     margin-bottom: 1.3rem;
   }
+
+
 
   body {
     background-color: var(--theme-bg);
@@ -72,6 +66,10 @@
     color: var(--theme-text);
     text-decoration: underline;
     text-underline-offset: 5px;
+  }
+
+  a:hover{
+    color: white;
   }
 
     ul {
@@ -94,6 +92,12 @@
     margin-inline: auto;
   }
 
+  .summary{
+    font-weight: normal;
+    font-size: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
   @media (min-width: 640px) {
     .content {
       grid-template-columns: repeat(2, 1fr);
