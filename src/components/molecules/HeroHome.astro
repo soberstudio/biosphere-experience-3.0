@@ -1,11 +1,11 @@
 ---
-
 import { Picture } from "astro:assets";
+import Bouton from "../atoms/Bouton.astro";
 
 const { src, alt = "Biosphère Experience" } = Astro.props;
 ---
 
-<div id="hero" class=" hero-wrapper">
+<div id="hero" class="hero-wrapper">
   <Picture
     src={src}
     alt={alt}
@@ -14,12 +14,16 @@ const { src, alt = "Biosphère Experience" } = Astro.props;
     sizes="100vw"
     widths={[1200, 5000]}
   />
+
+  <Bouton 
+    href="https://framaforms.org/appel-a-candidature-sciences-citoyennes-biosphere-experience-mission-1-1773219306"
+    text="sciences citoyennes, candidatez!"
+  />
 </div>
 
 <style>
   .hero-wrapper {
+    position: relative;
     height: clamp(420px, calc(420px + (2000 - 420) * ((100vw - 320px) / (5120 - 320))), 600px);
   }
-
-
 </style>
