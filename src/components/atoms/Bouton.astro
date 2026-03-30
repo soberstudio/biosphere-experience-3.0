@@ -1,0 +1,44 @@
+---
+const { href, text } = Astro.props;
+---
+
+<a href={href} class="cta-button" target="_blank" rel="noopener noreferrer">
+  {text}
+</a>
+
+<style>
+.cta-button {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  padding: 0.6rem 1.2rem;
+
+  border: 1px solid var(--theme-text);
+  color: var(--theme-text);
+  text-decoration: none;
+
+  background: transparent;
+
+  transition: all 0.25s ease;
+}
+
+.cta-button:hover {
+  background: var(--theme-text);
+  color: var(--theme-bg);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .cta-button {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    bottom: 14%;
+  }
+}
+</style>
